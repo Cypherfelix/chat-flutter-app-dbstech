@@ -23,7 +23,9 @@ class SignInPage extends GetView<WelcomeController> {
 
   Widget _buildThirdPartyLogin(String loginType, String logo) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        print("sign in with : $loginType");
+      },
       child: Container(
         width: 295.w,
         height: 44.h,
@@ -93,6 +95,40 @@ class SignInPage extends GetView<WelcomeController> {
     );
   }
 
+  Widget _buildSignUpWidget() {
+    return GestureDetector(
+      onTap: () {
+        print("Sign up here");
+      },
+      child: Column(
+        children: [
+          Text(
+            "Already have an account?",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: AppColors.primaryText,
+              fontWeight: FontWeight.normal,
+              fontSize: 12.sp,
+            ),
+          ),
+          SizedBox(height: 5.h),
+          GestureDetector(
+            onTap: () {},
+            child: Text(
+              "Sign up here",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: AppColors.primaryElement,
+                fontWeight: FontWeight.normal,
+                fontSize: 12.sp,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,34 +143,7 @@ class SignInPage extends GetView<WelcomeController> {
             _buildOrWidget(),
             _buildThirdPartyLogin("with phone number", ""),
             SizedBox(height: 35.h),
-            GestureDetector(
-              onTap: () {},
-              child: Column(
-                children: [
-                  Text(
-                    "Already have an account?",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: AppColors.primaryText,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 12.sp,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Text(
-                      "Sign up here",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: AppColors.primaryElement,
-                        fontWeight: FontWeight.normal,
-                        fontSize: 12.sp,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
+            _buildSignUpWidget(),
           ],
         ),
       ),
