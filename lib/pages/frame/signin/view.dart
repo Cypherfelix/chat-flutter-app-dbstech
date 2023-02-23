@@ -1,10 +1,10 @@
 import 'package:chatty/common/values/values.dart';
-import 'package:chatty/pages/frame/welcome/controller.dart';
+import 'package:chatty/pages/frame/signin/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class SignInPage extends GetView<WelcomeController> {
+class SignInPage extends GetView<SignInController> {
   const SignInPage({super.key});
   Widget _buildLogo() {
     return Container(
@@ -24,7 +24,7 @@ class SignInPage extends GetView<WelcomeController> {
   Widget _buildThirdPartyLogin(String loginType, String logo) {
     return GestureDetector(
       onTap: () {
-        print("sign in with : $loginType");
+        controller.handleSignIn(logo);
       },
       child: Container(
         width: 295.w,

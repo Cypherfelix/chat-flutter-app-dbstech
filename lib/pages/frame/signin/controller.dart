@@ -1,7 +1,6 @@
 import 'package:chatty/common/entities/entities.dart';
-import 'package:chatty/pages/frame/SignIn/index.dart';
+import 'package:chatty/pages/frame/signin/index.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -32,6 +31,13 @@ class SignInController extends GetxController {
           loginPanelListRequestEntity.avatar = photoUrl;
           loginPanelListRequestEntity.open_id = id;
           loginPanelListRequestEntity.type = 2;
+          if (kDebugMode) {
+            print(email);
+          }
+        } else {
+          if (kDebugMode) {
+            print("user is null");
+          }
         }
       } else if (type == 'facebook') {
       } else if (type == 'apple') {
