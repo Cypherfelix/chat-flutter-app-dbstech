@@ -1,4 +1,3 @@
-import 'package:chatty/common/style/color.dart';
 import 'package:chatty/common/values/colors.dart';
 import 'package:chatty/pages/frame/welcome/controller.dart';
 import 'package:flutter/material.dart';
