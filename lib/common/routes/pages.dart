@@ -1,3 +1,4 @@
+import 'package:chatty/pages/frame/signin/index.dart';
 import 'package:chatty/pages/message/index.dart';
 import 'package:chatty/pages/frame/welcome/index.dart';
 import 'package:flutter/material.dart';
@@ -19,13 +20,13 @@ class AppPages {
       page: () => const WelcomePage(),
       binding: WelcomeBinding(),
     ),
-/*
+
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
+      page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
-
+/*
     // 需要登录
     // GetPage(
     //   name: AppRoutes.Application,
