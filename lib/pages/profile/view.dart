@@ -46,12 +46,13 @@ class ProfilePage extends GetView<ProfileController> {
         ),
         Positioned(
           right: 0.w,
-          bottom: 20.w,
+          bottom: 0.w,
           height: 35.w,
           child: GestureDetector(
             child: Container(
               height: 35.w,
               width: 35.w,
+              padding: EdgeInsets.all(7.w),
               decoration: BoxDecoration(
                 color: AppColors.primaryElement,
                 borderRadius: BorderRadius.all(
@@ -116,7 +117,7 @@ class ProfilePage extends GetView<ProfileController> {
       child: Container(
         height: 44.h,
         width: 295.w,
-        margin: EdgeInsets.only(top: 60.h, bottom: 30.h),
+        margin: EdgeInsets.only(top: 0.h, bottom: 30.h),
         decoration: BoxDecoration(
           color: AppColors.primarySecondaryElementText,
           borderRadius: BorderRadius.all(
@@ -152,10 +153,8 @@ class ProfilePage extends GetView<ProfileController> {
             textCancel: "No",
             content: Container(),
             confirmTextColor: Colors.white,
-            // cancelTextColor: Colors.white,
-            // buttonColor: AppColors.primaryElement,
             onConfirm: () {
-              // controller.logout();
+              controller.logout();
             },
             onCancel: () {});
       },
