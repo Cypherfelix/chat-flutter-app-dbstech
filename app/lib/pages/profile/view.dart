@@ -166,10 +166,9 @@ class ProfilePage extends GetView<ProfileController> {
     return Scaffold(
       appBar: _buildAppBar(),
       body: SafeArea(
-          child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: Container(
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
               child: Column(
                 children: [
                   _buildProfilePhoto(),
@@ -178,9 +177,9 @@ class ProfilePage extends GetView<ProfileController> {
                 ],
               ),
             ),
-          ),
-        ],
-      )),
+          ],
+        ),
+      ),
     );
   }
 }
