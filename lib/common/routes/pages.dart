@@ -1,6 +1,7 @@
 import 'package:chatty/pages/frame/signin/index.dart';
 import 'package:chatty/pages/message/index.dart';
 import 'package:chatty/pages/frame/welcome/index.dart';
+import 'package:chatty/pages/profile/index.dart';
 import 'package:flutter/material.dart';
 import 'package:chatty/common/middlewares/middlewares.dart';
 
@@ -54,9 +55,13 @@ class AppPages {
         RouteAuthMiddleware(priority: 1),
       ],
     ),
+
+    GetPage(
+        name: AppRoutes.Profile,
+        page: () => const ProfilePage(),
+        binding: ProfileBinding()),
+
     /*
-    GetPage(name: AppRoutes.Profile, page: () => ProfilePage(), binding: ProfileBinding()),
-    //聊天详情
     GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
 
     GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),
